@@ -32,6 +32,6 @@ async fn main() -> Result<(), reqwest::Error> {
 //    command.arg("hello").spawn();
     println!("{:?}", parsed);
     println!("{:?}", parsed[0]["title"]);
-    assert_eq!(parsed[0]["title"],"te le");
+    assert_eq!(parsed[0]["title"],"test title");
     Ok(())
 }
