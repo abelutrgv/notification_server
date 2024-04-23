@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, inital-scale=1.0" />
+        <title>Form</title>
+
+        <link rel="stylesheet" href="form.css">
+    </head>
+
+<body>
+    <header>
+        <div class="box1">
+            <div class="formlogo">
+                <p>Something Coming Up?</p>
+            </div>
+
+            <div class="set">
+                <p>Set It Up!</p>
+            </div>
+
+
+	    <% if (locals.status == "new") { // new entry was added %>
+	    		<div class="status"> New notification added succesfully! </div>
+	    <% } else if (locals.status == "error") { //incorrect information submitted %>
+	  		<div class="status"> You must fill in all the fields </div>  	
+	    <% } else { //first access so do nothing and render normally %>
+	    		<div class="status" style="color:#fff9f0">placeholder </div>
+	    <% } %>
+
+        </div>
+    </header>
+
+    <form method="POST" action="/form">
+        <div class="box">
+        
+        <div class="title1"> 
+            <label >Title:</label>
+            <input type="text" id="ti" name="title" placeholder="Cleaning" style="width: 300px" type="text">
+        </div>
+
+        <div class="desc1">
+            <label >Description:</label>
+            <input type="text" id="desc" name="desc"  placeholder="Wash the dishes, take out the trash..." style="width: 450px" type="text">
+            
+        </div>
+
+        <div class="date1">
+            <label>Date:</label>
+            <input type="date" min="2024-01" max="2030-12" name=date>
+            
+            
+        </div>
+
+        <div class="time1">
+            <label >Time:</label>
+            <input type="time" name=time>
+        </div>
+
+        <div class="ip1">
+            <label >User</label>
+            <input type="text" id="ipadd" name="user" placeholder="Name">
+        </div>
+
+        <div class="sub1">
+            <button>Submit</button>
+        </div>
+
+        </div>
+        
+
+
+
+    </form>
+
+</body>

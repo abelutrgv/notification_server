@@ -1,0 +1,117 @@
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
+
+
+body {
+    background-color: #fff9f0 ;
+    margin: 0;
+    padding-top: 20px;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+.formlogo {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding-right: 25px;
+    color: #334eac; 
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.set {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding-right: 25px;
+    padding-bottom: 30px;
+    color: #334eac; 
+    position: relative;
+}
+
+.status {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    color: #334eac; 
+    position: relative;
+}
+
+.box {
+    display: flex;
+    justify-content: ;
+    flex-direction: column;
+    padding-left: 40px;
+    gap: 30px;
+    height: 550px;
+    width: 500px;
+    margin: auto;
+    border-radius: 20px;
+    background-color: #d0e3ff;
+    color: #081f5c;
+}
+
+input {
+    display: block;
+}
+
+.title1 {
+    padding-top: 30px;
+    position: relative;
+    z-index: 2;
+    margin-top: 10px;
+    font-size: 16px;
+    justify-content: center;
+}
+
+::placeholder {
+    color:#d3e1ec;
+    opacity: 1;
+}
+input[type=text] {
+    background-color: #7096d1;
+    color:#fff9f0;
+}
+
+input[type=date] {
+    background-color: #7096d1;
+    color:#fff9f0;
+}
+
+input[type=time] {
+    background-color: #7096d1;
+    color:#fff9f0;
+}
+
+
+
+#desc {
+    width: 300px;
+    height: 100px;
+    text-align: start;
+    display: flex;
+}
+
+
+
+.sub1{
+    display: flex;
+    justify-content: center;
+    padding-right: 40px;
+}
+
+button {
+    background-color: #081f5c;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 40px;
+    color: #fff9f0;
+}
