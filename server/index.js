@@ -59,15 +59,20 @@ app.get('/notification', (req, res) => {
 	
 	let should_remove = null;
 
+	console.log(req.body.user, "connected!");
 	for (let x of db) {
 		//if notif is found matching username, return it and exit
 		if (x.user === req.body.user) {
 			if (rightTime(x)) {
-				console.log(req.body.user,`connected!\nsending messages...`);
+				console.log(req.body.user,`connected! Sending messages...`);
 				should_remove = x.user;
 				res.json({notification: true, data: x});
+			} else {
+				console.log(req.body.user, "has messages scheduled");
 			}
+
 		} 
+
 	}
 	if (should_remove != null) {
 		db = db.filter(e => { return e.user != should_remove });
